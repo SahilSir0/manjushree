@@ -5,6 +5,7 @@ import 'package:khalti_flutter/khalti_flutter.dart';
 import 'package:manjushree/controller/core_controller.dart';
 import 'package:manjushree/utils/colors.dart';
 import 'package:manjushree/views/dash_screen.dart';
+import 'package:manjushree/views/dashboard/image_screen.dart';
 import 'package:manjushree/views/splash_screen.dart';
 
 void main() async {
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
             initialBinding: BindingsBuilder(() {
               Get.put(CoreController());
             }),
-            home: SplashScreen(),
+            home: ImageScreen(),
           );
         });
   }
