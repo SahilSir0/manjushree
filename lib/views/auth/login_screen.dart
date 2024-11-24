@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:manjushree/controller/auth/login_controller.dart';
 import 'package:manjushree/utils/colors.dart';
 import 'package:manjushree/utils/validatior.dart';
+import 'package:manjushree/views/auth/forget_password_screen.dart';
 import 'package:manjushree/views/auth/register_screen.dart';
 import 'package:manjushree/widgets/custom/custom_textfield.dart';
 import 'package:manjushree/widgets/custom/elevated_button.dart';
@@ -131,6 +132,18 @@ class LogInScreen extends StatelessWidget {
                             ),
                           )
                         ],
+                      ),
+                      Center(
+                        child: InkWell(
+                          onTap: () {
+                            Get.to(() => ForgetPasswordScreen());
+                          },
+                          child: Text(
+                            "Forgot your password",
+                            style:
+                                TextStyle(decoration: TextDecoration.underline),
+                          ),
+                        ),
                       )
                     ],
                   ),
