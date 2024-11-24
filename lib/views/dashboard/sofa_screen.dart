@@ -24,38 +24,16 @@ class Sofa extends StatelessWidget {
           toolbarHeight: 50,
           backgroundColor: AppColors.extraWhite,
           centerTitle: false,
+          leading: InkWell(
+              onTap: () {
+                Get.back();
+              },
+              child: Icon(Icons.arrow_back)),
           title: Padding(
             padding: const EdgeInsets.all(15.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text(
-                          "MANJUSHREE FURNITURE",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 16),
-                        ),
-                      ],
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(
-                        left: 85.0,
-                      ),
-                      child: SizedBox(
-                        width: 40,
-                        height: 70,
-                        child: Image.network(
-                            "https://cdn-icons-png.flaticon.com/512/219/219983.png"),
-                      ),
-                    ),
-                  ],
-                ),
-              ],
+              children: [],
             ),
           ),
         ),
