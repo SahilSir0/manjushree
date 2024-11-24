@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
             initialBinding: BindingsBuilder(() {
               Get.put(CoreController());
             }),
-            home: ImageScreen(),
+            home: DashScreen(),
           );
         });
   }

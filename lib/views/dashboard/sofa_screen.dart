@@ -1,13 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:manjushree/views/dashboard/bed_screen.dart';
-import 'package:manjushree/views/dashboard/cabinet_screen.dart';
-import 'package:manjushree/views/dashboard/chair_screen.dart';
-import 'package:manjushree/views/dashboard/dining_screen.dart';
-import 'package:manjushree/views/dashboard/home_screen.dart';
+
 import 'package:manjushree/views/dashboard/product_desc_screen.dart';
-import 'package:manjushree/views/dashboard/table_screen.dart';
-import 'package:manjushree/views/dashboard/wardrobe_screen.dart';
 
 import '../../utils/colors.dart';
 import '../../utils/custom_text_style.dart';
@@ -61,77 +55,6 @@ class Sofa extends StatelessWidget {
                         child: Image(
                           image: AssetImage("assets/icons/addtocart.png"),
                         ),
-                      ),
-                    ],
-                  ),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Padding(
-                        padding: const EdgeInsets.only(top: 10.0),
-                        child: Text("Categories",
-                            style: CustomTextStyles.f12W600())),
-                  ],
-                ),
-                const SizedBox(height: 10),
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      InkWell(
-                          onTap: () {
-                            Get.to(() => Sofa());
-                          },
-                          child: const CategoryButton(
-                              name: "Sofa", icon: "assets/icons/sofa.png")),
-                      const SizedBox(width: 5),
-                      InkWell(
-                        onTap: () {
-                          Get.to(() => TableScreen());
-                        },
-                        child: const CategoryButton(
-                            name: "Table", icon: "assets/icons/table.png"),
-                      ),
-                      const SizedBox(width: 5),
-                      InkWell(
-                          onTap: () {
-                            Get.to(() => BedScreen());
-                          },
-                          child: const CategoryButton(
-                              name: "Bed", icon: "assets/icons/bed.png")),
-                      const SizedBox(width: 5),
-                      InkWell(
-                        onTap: () {
-                          Get.to(() => DiningScreen());
-                        },
-                        child: const CategoryButton(
-                            name: "Dinning", icon: "assets/icons/dining.png"),
-                      ),
-                      const SizedBox(width: 5),
-                      InkWell(
-                        onTap: () {
-                          Get.to(() => WardrobeScreen());
-                        },
-                        child: const CategoryButton(
-                            name: "Wardrobe",
-                            icon: "assets/icons/wardrobe.png"),
-                      ),
-                      const SizedBox(width: 5),
-                      InkWell(
-                        onTap: () {
-                          Get.to(() => ChairScreen());
-                        },
-                        child: const CategoryButton(
-                            name: "Chair", icon: "assets/icons/chair.png"),
-                      ),
-                      const SizedBox(width: 5),
-                      InkWell(
-                        onTap: () {
-                          Get.to(() => CabinetScreen());
-                        },
-                        child: const CategoryButton(
-                            name: "Cabinets", icon: "assets/icons/cabinet.png"),
                       ),
                     ],
                   ),

@@ -24,38 +24,16 @@ class TableScreen extends StatelessWidget {
           toolbarHeight: 50,
           backgroundColor: AppColors.extraWhite,
           centerTitle: false,
+          leading: InkWell(
+              onTap: () {
+                Get.back();
+              },
+              child: Icon(Icons.arrow_back)),
           title: Padding(
             padding: const EdgeInsets.all(15.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text(
-                          "MANJUSHREE FURNITURE",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 16),
-                        ),
-                      ],
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(
-                        left: 85.0,
-                      ),
-                      child: SizedBox(
-                        width: 40,
-                        height: 70,
-                        child: Image.network(
-                            "https://cdn-icons-png.flaticon.com/512/219/219983.png"),
-                      ),
-                    ),
-                  ],
-                ),
-              ],
+              children: [],
             ),
           ),
         ),
@@ -83,77 +61,6 @@ class TableScreen extends StatelessWidget {
                         child: Image(
                           image: AssetImage("assets/icons/addtocart.png"),
                         ),
-                      ),
-                    ],
-                  ),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Padding(
-                        padding: const EdgeInsets.only(top: 10.0),
-                        child: Text("Categories",
-                            style: CustomTextStyles.f12W600())),
-                  ],
-                ),
-                const SizedBox(height: 10),
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      InkWell(
-                          onTap: () {
-                            Get.to(() => Sofa());
-                          },
-                          child: const CategoryButton(
-                              name: "Sofa", icon: "assets/icons/sofa.png")),
-                      const SizedBox(width: 5),
-                      InkWell(
-                        onTap: () {
-                          Get.to(() => TableScreen());
-                        },
-                        child: const CategoryButton(
-                            name: "Table", icon: "assets/icons/table.png"),
-                      ),
-                      const SizedBox(width: 5),
-                      InkWell(
-                          onTap: () {
-                            Get.to(() => BedScreen());
-                          },
-                          child: const CategoryButton(
-                              name: "Bed", icon: "assets/icons/bed.png")),
-                      const SizedBox(width: 5),
-                      InkWell(
-                        onTap: () {
-                          Get.to(() => DiningScreen());
-                        },
-                        child: const CategoryButton(
-                            name: "Dinning", icon: "assets/icons/dining.png"),
-                      ),
-                      const SizedBox(width: 5),
-                      InkWell(
-                        onTap: () {
-                          Get.to(() => WardrobeScreen());
-                        },
-                        child: const CategoryButton(
-                            name: "Wardrobe",
-                            icon: "assets/icons/wardrobe.png"),
-                      ),
-                      const SizedBox(width: 5),
-                      InkWell(
-                        onTap: () {
-                          Get.to(() => ChairScreen());
-                        },
-                        child: const CategoryButton(
-                            name: "Chair", icon: "assets/icons/chair.png"),
-                      ),
-                      const SizedBox(width: 5),
-                      InkWell(
-                        onTap: () {
-                          Get.to(() => CabinetScreen());
-                        },
-                        child: const CategoryButton(
-                            name: "Cabinets", icon: "assets/icons/cabinet.png"),
                       ),
                     ],
                   ),
