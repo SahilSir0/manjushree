@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:manjushree/controller/auth/login_controller.dart';
 import 'package:manjushree/utils/custom_text_style.dart';
+import 'package:manjushree/views/auth/forget_password_screen_two.dart';
+import 'package:manjushree/widgets/custom/elevated_button.dart';
 
 import '../../utils/validatior.dart';
 import '../../widgets/custom/custom_textfield.dart';
@@ -24,7 +26,11 @@ class ForgetPasswordScreen extends StatelessWidget {
                   image: AssetImage("assets/common/forgetpassword.png"),
                 )),
             Padding(
-              padding: const EdgeInsets.all(50.0),
+              padding: const EdgeInsets.only(
+                top: 30.0,
+                right: 50,
+                left: 50,
+              ),
               child: Center(
                 child: Text(
                     "Please enter your email address to receive a verification code",
@@ -43,6 +49,14 @@ class ForgetPasswordScreen extends StatelessWidget {
                 textInputType: TextInputType.emailAddress,
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: CustomElevatedButton(
+                  title: "Send",
+                  onTap: () {
+                    Get.to(() => ForgetPasswordScreenTwo());
+                  }),
+            )
           ],
         ),
       ),
